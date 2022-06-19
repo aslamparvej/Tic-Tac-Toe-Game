@@ -14,6 +14,9 @@
     <link rel="stylesheet" href="./styles/overlays.css">
     <link rel="stylesheet" href="./styles/configaration.css">
     <link rel="stylesheet" href="./styles/game.css">
+    <script src="./scripts/config.js" defer></script>
+    <script src="./scripts/game.js" defer></script>
+    <script src="./scripts/app.js" defer></script>
     <title>Tic Tac Toe</title>
   </head>
 
@@ -22,7 +25,7 @@
     <!-- header section -->
     <header id="main-header">
       <h1>Tic Tac Toe</h1>
-      <p>Made By <a href="#">Aslam Parvej</a></p>
+      <p>Made By <a href="https://aslamparvej.github.io/Portfolio/" target="_blank">Aslam Parvej</a></p>
     </header>
 
     <!-- main section  -->
@@ -33,10 +36,11 @@
         <form>
           <div class="form-control">
             <label for="player-name">Player Name</label>
-            <input type="text" name="player-name" id="player-name" />
+            <input type="text" name="player-name" id="player-name" required/>
+            <p id="error-message"></p>
           </div>
           <div>
-            <button type="button" class="btn btn-alt">Cancel</button>
+            <button type="button" class="btn btn-alt" id="cancel-config-btn">Cancel</button>
             <button type="submit" class="btn">Confirm</button>
           </div>
         </form>
@@ -46,19 +50,19 @@
       <section id="game-configaration">
         <ol>
           <li>
-            <article>
+            <article id="player-1-data">
               <h2>Player 1</h2>
               <h3>Player Name</h3>
               <p class="player-symbol">X</p>
-              <button class="btn btn-alt">Edit</button>
+              <button class="btn btn-alt" id="edit-player-1-btn" data-playerId="1">Edit</button>
             </article>
           </li>
           <li>
-            <article>
+            <article id="player-2-data">
               <h2>Player 2</h2>
               <h3>Player Name</h3>
               <p class="player-symbol">O</p>
-              <button class="btn btn-alt">Edit</button>
+              <button class="btn btn-alt" id="edit-player-2-btn" data-playerId="2">Edit</button>
             </article>
           </li>
         </ol>
