@@ -29,7 +29,7 @@ function savePlayerConfig(event) {
     "player-" + editedPlayer + "-data"
   );
   updatedPlayerElement.children[1].textContent = enteredPlayerName;
-  playres[editedPlayer - 1].name = enteredPlayerName;
+  players[editedPlayer - 1].name = enteredPlayerName;
 
   closePlayerConfig();
 }
